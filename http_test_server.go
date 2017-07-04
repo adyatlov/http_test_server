@@ -12,8 +12,9 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	buff.WriteString("Remote address:" + r.RemoteAddr + "\n")
 	var delay int
-	buff := bytes.NewBufferString("")
+	buff := bytes.NewBufferString("")v
 	buff.WriteString("New request: " + r.URL.String() + "\n")
 	// Print env vars
 	envVars := os.Environ()
